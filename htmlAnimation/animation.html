@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				height: 100vh;
+				background: #CCCCCC;
+			}
+			.box,.box2{
+				width: 200px;
+				height: 200px;
+				border: 20px solid #000;
+				margin:0px auto;
+				position: relative;
+				box-sizing: border-box
+				
+			}
+			.box{
+				border-radius: 50%;
+				animation: a2 3s linear infinite;
+			}
+			
+			.ball,.ball2{
+				width: 20px;
+				height: 20px;
+				background: white;
+				border-radius: 50%;
+				position: absolute;
+				box-sizing: border-box;
+			}
+			.ball{
+				top:12px;
+				left:0px;
+				animation: a1 3s linear infinite;
+			}
+			.ball2{
+				top:-20px;
+				left:-20px;
+				animation: a3 3s linear infinite;
+			}
+			
+			@keyframes a1{
+				to{
+					transform: rotate(-360deg);
+					transform: scale(0.5);
+				}
+				
+			}
+			@keyframes a2{
+				to{
+					transform: rotate(360deg);
+				}
+				
+			}
+			@keyframes a3{
+				25%{
+					transform: translateX(180px);
+				}
+				50%{
+					transform: translate(180px,180px) scale(.5);
+				}
+				75%{
+					transform: translateY(180px) scale(.5);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="ball"></div>
+		</div>
+		<div class="box2">
+			<div class="ball2"></div>
+		</div>
+	</body>
+</html>
